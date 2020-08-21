@@ -1,0 +1,26 @@
+DESCRIPCION:
+Lee los dispositivos de control de acceso con una frecuencia de operacion de 125KHz y su identificador unico de registro es enviado a travez del servidor
+web a una base de datos para llevar un control de sus registros.
+
+Procedimento.
+1- Debe crear una base de datos con el nombre de Bioseguridad.
+2- Dentro de la base de datos de Bioseguridad debe crearse una tabla con el nombre de lavamanos con 6 columnas.
+3- La tabla creada debe incluir las siguientes columnas.
+
+	1) Nombre:id;		Tipo:Int;		Longitud:11;	AutoIncremental;	Primary.
+	2) Nombre:usuario;	Tipo:Int;		Longitud:10;
+	3) Nombre:ubicacion; 	Tipo:Int;		Longitud:3;	
+	4) Nombre:temperatura;	Tipo:Float;		Longitud:10;
+	5) Nombre:humedad;	Tipo:Float;		Logitud:10;
+	6) Nombre:fecha;	Tipo:TimeStamp;		Longitud:6;
+
+4- Ubicar la ruta de acceso para compartir los archivos con el servidor. (ejemplo:C:\xampp\htdocs)
+5- Crear una carpeta con el nombre de Arduino.
+6- Dentro de la carpeta de Arduino Copiar la carpeta de Bioseguridad suministrada con este conjunto de informacion.
+7- Abra el navegador web e introduzca la siguiete url
+
+http://192.168.1.162/Arduino/Bioseguridad/Arduino_Lavamanos.php?usuario=123&ubicacion=5&temperatura=25.3&humedad=76.8
+
+8- Descague el programa al arduino el cual esta almacenado en esta carpeta
+
+9- Cada vez que se genere un pulso en el pin # 2 del arduino incrementara la variable interna en un factor de 3.
